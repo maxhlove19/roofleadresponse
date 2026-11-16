@@ -1,0 +1,125 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>Roof Lead Response</title><meta name="description" content="Every missed call and web lead texted back in under a minute, with the inspection booked on your calendar. For Texas roofing companies."><style>*{box-sizing:border-box}body{margin:0}</style></head><body>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap">
+<style>
+/* Layout: one narrow column; the hero is a phone thread showing a missed call answered in seconds. */
+:root{
+  --bg:#F2F3F0; --surface:#FFFFFF; --ink:#15191D; --mute:#58616A; --line:#D9DCD5;
+  --accent:#1F4E79; --accent-ink:#FFFFFF; --amber:#B86E00; --bubble:#E6EAE3; --sent:#1F4E79; --sent-ink:#FFFFFF;
+  --display:"Archivo","Arial Narrow",system-ui,sans-serif; --body:"Inter",system-ui,sans-serif; --mono:"JetBrains Mono",ui-monospace,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#101316; --surface:#181D22; --ink:#ECEEF0; --mute:#A3ACB5; --line:#2A3138;
+  --accent:#6FA8DC; --accent-ink:#0B1520; --amber:#E9A53A; --bubble:#232A31; --sent:#3D74A8; --sent-ink:#FFFFFF; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#101316; --surface:#181D22; --ink:#ECEEF0; --mute:#A3ACB5; --line:#2A3138;
+  --accent:#6FA8DC; --accent-ink:#0B1520; --amber:#E9A53A; --bubble:#232A31; --sent:#3D74A8; --sent-ink:#FFFFFF; color-scheme:dark}
+body{background:var(--bg);color:var(--ink);font:16px/1.55 var(--body)}
+.wrap{max-width:720px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:40px 64px;display:flex;flex-direction:column;gap:56px}
+h1,h2{font-family:var(--display);text-wrap:balance;margin:0;line-height:1.08}
+h1{font-size:clamp(34px,7vw,54px);font-weight:800;letter-spacing:-.01em}
+h2{font-size:clamp(24px,4.5vw,32px);font-weight:800}
+p{margin:0;max-width:62ch}
+.eyebrow{font:600 12px var(--body);letter-spacing:.12em;text-transform:uppercase;color:var(--amber)}
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:32px;align-items:center}
+.hero>div{min-width:0;display:flex;flex-direction:column;gap:16px}
+.lede{font-size:18px;color:var(--mute)}
+.phone{background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:18px 14px;display:flex;flex-direction:column;gap:10px;font-size:14px}
+.sys{font:500 12px var(--mono);color:var(--mute);text-align:center}
+.missed{color:var(--amber);font-weight:600;text-align:center;font-size:13px}
+.b{max-width:85%;padding:9px 12px;border-radius:16px;line-height:1.4}
+.in{background:var(--bubble);align-self:flex-start;border-bottom-left-radius:4px}
+.out{background:var(--sent);color:var(--sent-ink);align-self:flex-end;border-bottom-right-radius:4px}
+section{display:flex;flex-direction:column;gap:18px}
+.list{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.item{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:16px;display:flex;flex-direction:column;gap:6px;min-width:0}
+.item b{font-family:var(--display);font-size:18px}
+.item span{color:var(--mute);font-size:15px}
+ol.steps{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:14px;counter-reset:s}
+ol.steps li{counter-increment:s;display:grid;grid-template-columns:36px 1fr;gap:12px;align-items:start}
+ol.steps li::before{content:counter(s);font:800 18px var(--display);color:var(--accent-ink);background:var(--accent);width:32px;height:32px;border-radius:50%;display:grid;place-items:center}
+ol.steps b{display:block}
+ol.steps span{color:var(--mute)}
+.price{background:var(--surface);border:2px solid var(--accent);border-radius:16px;padding:24px;display:flex;flex-direction:column;gap:14px}
+.nums{display:flex;gap:28px;flex-wrap:wrap;align-items:baseline}
+.num{font:800 40px var(--display);font-variant-numeric:tabular-nums}
+.num small{font:500 15px var(--body);color:var(--mute);margin-left:4px}
+.guar{border-left:3px solid var(--amber);padding-left:12px}
+details{border-bottom:1px solid var(--line);padding:12px 0}
+summary{font-weight:600;cursor:pointer}
+details p{margin-top:8px;color:var(--mute)}
+summary:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.cta{background:var(--accent);color:var(--accent-ink);border-radius:16px;padding:24px;display:flex;flex-direction:column;gap:8px}
+.cta h2{color:var(--accent-ink)}
+footer{color:var(--mute);font-size:13px}
+@media (max-width:640px){.hero{grid-template-columns:1fr}.list{grid-template-columns:1fr}}
+</style>
+
+<div class="wrap">
+  <header class="hero">
+    <div>
+      <span class="eyebrow">For roofing companies</span>
+      <h1>Every missed call answered in under a minute.</h1>
+      <p class="lede">You're on a roof, the phone rings, and the homeowner calls the next roofer on Google. This texts them back in seconds, day or night, and books the inspection on your calendar.</p>
+    </div>
+    <div class="phone" aria-label="Example text thread">
+      <div class="sys">Tue 6:41 PM</div>
+      <div class="missed">Missed call · (214) 555-0148</div>
+      <div class="b out">Hi, this is ABC Roofing. Sorry we missed you! What's going on with the roof?</div>
+      <div class="b in">Hail last night. I think shingles came off the back side</div>
+      <div class="b out">We can get someone out for a free inspection. Does Thursday 10am or 2pm work better?</div>
+      <div class="b in">2pm</div>
+      <div class="b out">You're booked for Thursday at 2:00 PM. See you then.</div>
+    </div>
+  </header>
+
+  <section>
+    <h2>What you get</h2>
+    <div class="list">
+      <div class="item"><b>Missed-call text-back</b><span>Every missed call gets a text from your business within seconds, after hours and on weekends too.</span></div>
+      <div class="item"><b>60-second lead replies</b><span>Every web form and ad lead gets a text within a minute, while they're still deciding who to call.</span></div>
+      <div class="item"><b>Inspections booked for you</b><span>Replies are answered and the inspection lands on your calendar. Your team just shows up.</span></div>
+      <div class="item"><b>Review requests</b><span>After each finished job, the homeowner gets a text asking for a Google review.</span></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>How it starts</h2>
+    <ol class="steps">
+      <li><div><b>A 10-minute call</b><span>We go over your phone line, your calendar and how you like inspections booked.</span></div></li>
+      <li><div><b>Setup and carrier registration</b><span>Business texting has to be registered with the phone carriers. That takes about 2–3 weeks. We handle it.</span></div></li>
+      <li><div><b>It goes live</b><span>Missed calls and new leads start getting answered. You get a short report every month: leads answered, inspections booked.</span></div></li>
+    </ol>
+  </section>
+
+  <section class="price">
+    <span class="eyebrow">Price</span>
+    <div class="nums">
+      <div class="num">$497<small>setup</small></div>
+      <div class="num">$497<small>per month</small></div>
+    </div>
+    <p>No contract. Cancel any month. Setup includes your first month.</p>
+    <p class="guar"><b>If it doesn't book you a single inspection in the first 30 days after it goes live, your setup fee is refunded.</b></p>
+    <p style="color:var(--mute)">One replacement roof covers years of this.</p>
+  </section>
+
+  <section>
+    <h2>Questions roofers ask</h2>
+    <div>
+      <details><summary>Is a robot talking to my customers?</summary><p>It texts to catch them before they call someone else, answers simple questions, and books the time. Your team still does every inspection and every sales conversation.</p></details>
+      <details><summary>Do I need to learn new software?</summary><p>No. It's set up and run for you. You'll see inspections on your calendar and get a monthly report.</p></details>
+      <details><summary>Does it text my old customers?</summary><p>No. It only texts people who contacted you first, like a missed caller or a new web lead. That keeps you clear of texting rules.</p></details>
+      <details><summary>What if I already use Podium, Roofr or GoHighLevel?</summary><p>Plenty of roofers pay for tools that never got set up to answer fast. If you already have GoHighLevel, it can be built on your account.</p></details>
+      <details><summary>Can I cancel?</summary><p>Any month. There's no contract.</p></details>
+    </div>
+  </section>
+
+  <section class="cta">
+    <h2>Want it on your phone line?</h2>
+    <p>Call or text Max at <a href="tel:+19728959153" style="color:inherit;font-weight:700">(972) 895-9153</a> and setup starts this week.</p>
+  </section>
+
+  <footer>Run by Max Love. Serving roofing companies in Dallas–Fort Worth and across Texas.</footer>
+</div>
+</body></html>
