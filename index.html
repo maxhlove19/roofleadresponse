@@ -53,6 +53,14 @@ summary:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
 .cta{background:var(--accent);color:var(--accent-ink);border-radius:16px;padding:24px;display:flex;flex-direction:column;gap:8px}
 .cta h2{color:var(--accent-ink)}
 footer{color:var(--mute);font-size:13px}
+.calc{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.calc label{display:flex;flex-direction:column;gap:6px;font-size:14px;font-weight:600;color:var(--mute)}
+.calc input{font:600 18px var(--body);padding:10px 12px;border:1px solid var(--line);border-radius:10px;background:var(--surface);color:var(--ink);width:100%}
+.calc input:focus-visible{outline:3px solid var(--accent);outline-offset:1px}
+.roi .out{font-size:20px}.roi .out b{font-family:var(--display);font-variant-numeric:tabular-nums}
+.btn{display:inline-block;align-self:flex-start;background:var(--accent-ink);color:var(--accent);padding:12px 18px;border-radius:10px;font-weight:700;text-decoration:none}
+footer a{color:var(--mute)}
+@media (max-width:640px){.calc{grid-template-columns:1fr}}
 @media (max-width:640px){.hero{grid-template-columns:1fr}.list{grid-template-columns:1fr}}
 </style>
 
@@ -93,6 +101,13 @@ footer{color:var(--mute);font-size:13px}
     </ol>
   </section>
 
+  <section class="roi" id="roi"><h2>What missed calls cost you</h2><p style="color:var(--mute)">Put in your own numbers. Nothing is sent anywhere.</p>
+<div class="calc"><label>Leads and calls a month<input type="number" id="r-leads" value="60" min="0" inputmode="numeric"></label>
+<label>Share you miss or reach late (%)<input type="number" id="r-miss" value="25" min="0" max="100" inputmode="numeric"></label>
+<label>Your close rate on inspections (%)<input type="number" id="r-close" value="30" min="0" max="100" inputmode="numeric"></label>
+<label>Average job ($)<input type="number" id="r-job" value="12000" min="0" inputmode="numeric"></label></div>
+<p class="out" aria-live="polite">About <b id="r-jobs">4.5</b> jobs a month, or <b id="r-dollars">$54,000</b>, going to the next roofer.</p>
+<p style="color:var(--mute);font-size:14px">Missed leads &times; close rate &times; average job. Catching even a few of those covers this many times over.</p></section>
   <section class="price">
     <span class="eyebrow">Price</span>
     <div class="nums">
@@ -115,11 +130,14 @@ footer{color:var(--mute);font-size:13px}
     </div>
   </section>
 
-  <section class="cta">
-    <h2>Want it on your phone line?</h2>
-    <p>Call or text Max at <a href="tel:+19728959153" style="color:inherit;font-weight:700">(972) 895-9153</a> and setup starts this week.</p>
-  </section>
+  <section class="cta"><h2>Book a free 30-minute audit</h2><p>We look at how calls and leads come in at your shop and show you where jobs slip away. No pitch. Call or text Max at (972) 895-9153.</p><a class="btn" href="tel:+19728959153">Call (972) 895-9153</a></section>
 
-  <footer>Run by Max Love. Serving roofing companies in Dallas–Fort Worth and across Texas.</footer>
+  <footer>Roof Lead Response, run by Max Love. 2400 North Henderson Ave, Ste B #1250, Dallas, TX 75206. (972) 895-9153. <a href="privacy.html">Privacy</a> &middot; <a href="terms.html">Terms</a></footer>
 </div>
-</body></html>
+<script>
+(function(){var f=function(id){var v=parseFloat(document.getElementById(id).value);return isFinite(v)&&v>0?v:0};
+function u(){var j=f('r-leads')*Math.min(f('r-miss'),100)/100*Math.min(f('r-close'),100)/100;
+document.getElementById('r-jobs').textContent=(Math.round(j*10)/10).toLocaleString('en-US');
+document.getElementById('r-dollars').textContent='$'+Math.round(j*f('r-job')).toLocaleString('en-US');}
+['r-leads','r-miss','r-close','r-job'].forEach(function(i){document.getElementById(i).addEventListener('input',u)});u();})();
+</script></body></html>
